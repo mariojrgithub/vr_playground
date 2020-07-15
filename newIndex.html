@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="bean" src="sdfdsgafgdfgsdfg.jpg" />
+        <a-asset-item id="ironman" src="./ironman/ironman.gltf"></a-asset-item>
+        <a-asset-item id="doom" src="./doom/doom.gltf"></a-asset-item>
+      </a-assets>
+      <a-sky src="#bean"></a-sky>
+      <a-entity
+        gltf-model="#ironman"
+        position="0 2 -4"
+        scale="0.00111 0.00111 0.00111"
+        rotation="45 0 0"
+        animation="property: object3D.position.y;
+        from: 1.2;  
+        to: 2.0; 
+          dir: alternate; 
+          dur: 2000; 
+          loop: true"
+      ></a-entity>
+      <a-entity
+        gltf-model="#doom"
+        position="0 8 4"
+        scale="0.45  0.45 0.45"
+        rotation="45 180 0"
+        animation="property: object3D.position.y;
+        from: 4.4;  
+        to: 6.4; 
+          dir: alternate; 
+          dur: 2000; 
+          loop: true"
+      ></a-entity>
+      <a-light type="spot" intensity="2" rotation="45 0 0"></a-light>
+      <a-light
+        type="spot"
+        intensity="2"
+        position="0 0 0"
+        rotation="45 180 0"
+      ></a-light>
+    </a-scene>
+  </body>
+</html>
