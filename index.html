@@ -9,8 +9,22 @@
         <img id="bean" src="sdfdsgafgdfgsdfg.jpg" />
         <a-asset-item id="ironman" src="./ironman/ironman.gltf"></a-asset-item>
         <a-asset-item id="doom" src="./doom/doom.gltf"></a-asset-item>
+        <a-asset-item
+          id="deathstar"
+          src="./deathstar/deathstar.gltf"
+        ></a-asset-item>
       </a-assets>
       <a-sky src="#bean"></a-sky>
+      <a-entity camera look-controls>
+        <a-entity
+          cursor="fuse: true; fuseTimeout: 500"
+          position="0 0 -1"
+          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+          material="color: black; shader: flat"
+        >
+        </a-entity>
+      </a-entity>
+
       <a-entity
         gltf-model="#ironman"
         position="0 2 -4"
@@ -22,6 +36,7 @@
           dir: alternate; 
           dur: 2000; 
           loop: true"
+        cursor-listener
       ></a-entity>
       <a-entity
         gltf-model="#doom"
@@ -34,6 +49,14 @@
           dir: alternate; 
           dur: 2000; 
           loop: true"
+      ></a-entity>
+
+      <a-entity
+        gltf-model="#deathstar"
+        position="-10 15 0"
+        scale="0.0145  0.0145 0.0145"
+        rotation="0 0 0"
+        animation="property: rotation; to: 0 360; loop: true; dur: 20000"
       ></a-entity>
       <a-light type="spot" intensity="2" rotation="45 0 0"></a-light>
       <a-light
