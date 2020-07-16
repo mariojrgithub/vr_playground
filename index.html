@@ -58,7 +58,18 @@
         rotation="45 45 45"
         animation="property: rotation; to: 0 360; loop: true; dur: 20000"
       ></a-entity>
-
+      <a-entity
+        gltf-model="#police"
+        position="10 8 0"
+        scale="0.45  0.45 0.45"
+        rotation="25 -45 0"
+        animation="property: object3D.position.z;
+        from: -20;  
+        to: 20; 
+          dir: alternate; 
+          dur: 30000; 
+          loop: true"
+      ></a-entity>
       <a-light type="spot" intensity="2" rotation="33 0 0"></a-light>
       <a-light
         type="spot"
