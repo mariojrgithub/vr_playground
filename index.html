@@ -19,7 +19,7 @@
         <a-entity
           cursor="fuse: true; fuseTimeout: 500"
           position="0 0 -1"
-          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+          geometry="primitive: ring; radiusInner: 0.005; radiusOuter: 0.01"
           material="color: black; shader: flat"
         >
         </a-entity>
@@ -27,7 +27,7 @@
 
       <a-entity
         gltf-model="#ironman"
-        position="0 2 -4"
+        position="0 2 -6"
         scale="0.00111 0.00111 0.00111"
         rotation="45 0 0"
         animation="property: object3D.position.y;
@@ -40,7 +40,7 @@
       ></a-entity>
       <a-entity
         gltf-model="#doom"
-        position="0 8 4"
+        position="0 8 8"
         scale="0.45  0.45 0.45"
         rotation="45 180 0"
         animation="property: object3D.position.y;
@@ -52,9 +52,9 @@
       ></a-entity>
       <a-entity
         gltf-model="#deathstar"
-        position="-10 15 0"
+        position="-10 20 -5"
         scale="0.0145  0.0145 0.0145"
-        rotation="0 0 0"
+        rotation="45 45 45"
         animation="property: rotation; to: 0 360; loop: true; dur: 20000"
       ></a-entity>
       <a-light type="spot" intensity="2" rotation="45 0 0"></a-light>
